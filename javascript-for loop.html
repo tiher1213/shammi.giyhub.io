@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Java script basic learning.</h1>
+    <ul class="lists">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li> 
+
+
+    </ul>
+   
+    </div>
+
+
+
+
+    <script>
+  //Array       
+  const person = ['farhana shammi', 26, 'Bangladesh', 'student', '1.2 inch'];      
+  //replace iten data.
+  //person[2] = 'India';
+  //person[1] = 40;
+  
+  
+  //console.log(person);  
+  //console.log(person[0]);  
+  //console.log(person[1]);  
+  //console.log(person[2]);  
+  //console.log(person.length);
+  
+  for( let i=0 ; i < person.length ; i++ ) {
+    console.log(person[i] );
+} 
+  let element= document.querySelectorAll('.lists li');
+  for( let i=0 ; i < element.length ; i++ ) {
+      element[i].style.fontSize = 20 + i + 'px';
+  }
+   
+   
+   </script>
+
+
+
+</body>
+
+</html>
