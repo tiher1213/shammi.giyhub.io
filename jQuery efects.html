@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        body {
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            border: 2px solid #ddd;
+            padding: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container" id="content">
+        <h1> Learning jQuery</h1>
+        <button id="clickme">Click me</button>
+        <div class="output" style="padding:30px;border:2px solid red; margin:15px 0;">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, aut molestiae! Blanditiis delectus
+                nisi atque alias repellendus, voluptatibus non natus nostrum nihil ea illum, nam sed id ullam. Officia
+                quaerat reiciendis iste cupiditate possimus provident, distinctio et dolores maiores! Assumenda autem
+                sunt asperiores ipsa ab facere ex nobis nihil veritatis!</p>
+        </div>
+        <div class="text-output" style="padding:30px;border:2px solid green;margin:15px 0;"></div>
+        <div class="html-output" style="padding:30px;border:2px solid blue;margin:15px 0;"></div>
+        <form action="">
+
+            <input type="text" id="user-name"> <br>
+
+            <input type="text" id="user-input"> <br>
+            <div style="border: solid 1px black;padding: 5px; display: inline;">
+                <input style="border:none;outline: none;" type="password" id="user-pass">
+                <span id="show-pass">
+                    <svg width="14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                        <path
+                            d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z" />
+                        </svg>
+
+                </span>
+            </div>
+
+
+
+        </form>
+
+    </div>
+
+
+    <script>
+        /* (function($){
+$('#clickme').on('click', function(){
+ $('.output').hide(5000);  
+}); */
+
+        /* (function($){
+        $('#clickme').on('click', function(){
+         $('.output').show();  
+        });  */
+
+        /* (function($){
+        $('#clickme').on('click', function(){
+         $('.output').toggle();  
+        });  */
+        /* (function($){
+        $('#clickme').on('click', function(){
+         $('.output').fadeout(3000);  
+        });  */
+        /* (function($){
+        $('#clickme').on('click', function(){
+         $('.output').fadeIn(3000);  
+        });  */
+        /* (function($){
+        $('#clickme').on('click', function(){
+         $('.output').fadeToggle(3000);  
+        }); 
+         */
+        (function ($) {
+            /* $('#clickme').on('click', function(){
+             $('.output').fadeIn(5000, function(){
+                 $(this).css('background-color','lightgreen');
+             });  
+            });  */
+            /* $('#clickme').on('click', function(){
+             $('.output').slideDown();
+                });  */
+
+            /* $('#clickme').on('click', function(){
+ $('.output').slideUp();
+    });  */
+
+            /* $('#clickme').on('click', function(){
+ $('.output').slideToggle();
+    }); */
+
+            //Animetion
+            /*  $('#clickme').on('click', function(){
+ $('.output').animate({
+     padding: '30px',
+     width: '500px',
+    left: '300px',
+     },5000);
+    });
+*/
+            /* $('#clickme').on('click', function(){
+             $('.output').css('background-color','lightblue')
+             .css('padding','30px');
+                });
+             */
+            /* $('#clickme').on('click', function(){
+            $('.output').text('<mark>sdlkjksdj</mark>akjfkjfkjfjfkj');
+               }); */
+            /*  $('#clickme').on('click', function(){
+ $('.output').html('<mark>sdlkjksdj</mark>akjfkjfkjfjfkj');
+    }); */
+            $('#clickme').on('click', function () {
+                let text = $('.output').text();
+                $('.text-output').text(text);
+            });
+
+            $('#clickme').on('click', function () {
+                let html = $('.output').html();
+                $('.html-output').html(html);
+            });
+
+            $('#clickme').on('click', function () {
+                let value = $('#user-name').val();
+                $('#user-input').val(value);
+            });
+
+               //show password
+            $('#show-pass').on('click', function () {
+                $('#user-pass').attr('type', 'text');
+            });
+
+        })(jQuery);
+    </script>
+
+
+
+
+</body>
+
+</html>
